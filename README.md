@@ -9,7 +9,7 @@ composer install
 symfony server:start -d
 ~~~
 
-## Create the Angular client
+## Create the Angular client + start it
 
 ~~~bash
 npm install -g @angular/cli
@@ -23,6 +23,8 @@ Create the client app
 
 ~~~bash
 ng new client
+cd client
+ng serve --open
 ~~~
 
 ## Create a new backend controller
@@ -37,5 +39,6 @@ php bin/console make:controller
 ## Install CORS
 
 ~~~bash
+cd server
 composer require nelmio/cors-bundle
 ~~~
