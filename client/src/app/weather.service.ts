@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-export interface Weather
+export class Weather
 {
-  temperature: Number,
-  sky: String
+  public temperature: number = NaN;
+  public sky: string = '';
 }
 
-export interface WeatherForecast
+export class WeatherForecast
 {
-  forecast: Weather[]
+  public forecast: Weather[] = [];
 }
 
-const API_URL: string = 'http://localhost:8000';
+const API_URL: string = 'https://localhost:8000';
 
 @Injectable({
   providedIn: 'root'
