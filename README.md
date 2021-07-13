@@ -52,4 +52,6 @@ ng add @angular/material
 # or 
 
 npm install @angular/material @angular/cdk @angular/animations --save
+
+ng add @angular/material
 ~~~
