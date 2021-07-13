@@ -62,3 +62,10 @@ ng add @angular/material
 cd client
 ng g c weather --module=app
 ~~~
+
+## Create a UI service
+
+~~~bash
+cd client
+ng g s weather
+~~~
