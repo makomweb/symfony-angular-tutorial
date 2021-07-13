@@ -15,7 +15,7 @@ class WeatherController extends AbstractController
      */
     public function today(): Response
     {
-        $weather = new WeatherResource(30, "sunny");
+        $weather = new WeatherResource(30, "cloudy");
         return $this->json($weather);
     }
 
