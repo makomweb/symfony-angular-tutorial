@@ -42,3 +42,14 @@ php bin/console make:controller
 cd server
 composer require nelmio/cors-bundle
 ~~~
+
+## Install Material
+
+~~~bash
+cd client
+ng add @angular/material
+
+# or 
+
+npm install @angular/material @angular/cdk @angular/animations --save
+~~~
