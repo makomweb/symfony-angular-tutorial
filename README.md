@@ -34,3 +34,8 @@ composer require --dev symfony/maker-bundle
 php bin/console make:controller
 ~~~
 
+## Install CORS
+
+~~~bash
+composer require nelmio/cors-bundle
+~~~
