@@ -25,5 +25,12 @@ Create the client app
 ng new client
 ~~~
 
+## Create a new backend controller
 
+~~~bash
+cd server
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
+php bin/console make:controller
+~~~
 
