@@ -55,3 +55,10 @@ npm install @angular/material @angular/cdk @angular/animations --save
 
 ng add @angular/material
 ~~~
+
+## Create a UI component
+
+~~~bash
+cd client
+ng g c weather --module=app
+~~~
