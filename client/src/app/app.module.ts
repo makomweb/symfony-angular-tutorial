@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherGridComponent } from './weather-grid/weather-grid.component';
+import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
-    WeatherGridComponent
+    WeatherGridComponent,
+    WeatherForecastComponent
   ],
   imports: [
     BrowserModule,
