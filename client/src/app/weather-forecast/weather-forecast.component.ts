@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Weather, WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weather-forecast',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherForecastComponent implements OnInit {
 
-  constructor() { }
+  public data: Weather[] = [];
+  public isLoading: boolean = true;
+
+  constructor(private service: WeatherService) { }
 
   ngOnInit(): void {
+    this.service.getForecast()
+      .subscribe(
+        data => this.data = data.forecast,
+        err => console.log('fetching forecast failed: ', err),
+        () => this.isLoading = false
+      );
   }
-
 }

@@ -16,12 +16,9 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void {
     this.service.getToday()
       .subscribe(
-        data => {
-          console.log('today: ', data);
-          this.data = data;
-        },
-        err => console.log('today failed: ', err),
+        data => this.data = data,
+        err => console.log('fetching today failed: ', err),
         () => this.isLoading = false
-        );
+      );
   }
 }
