@@ -2,10 +2,13 @@
     <span class="help is-info" *ngIf="isLoading">Loading...</span>
     <div *ngIf="!isLoading">
         <div *ngFor="let f of forecast.forecast">
-            <mat-card >
-                <mat-title>{{ f.temperature }}°C</mat-title>
+            <mat-card>
+                <mat-card-header>
+                    <mat-title>Sunday, 12 July</mat-title>
+                </mat-card-header>
                 <mat-card-content>
                     <mat-icon>{{ f.sky }}</mat-icon>
+                    <p>{{ f.temperature }}°C</p>
                 </mat-card-content>
             </mat-card>
         </div>
