@@ -1,1 +1,13 @@
-<p>weather-forecast works!</p>
+<div class="container">
+    <span class="help is-info" *ngIf="isLoading">Loading...</span>
+    <div *ngIf="!isLoading">
+        <div *ngFor="let f of forecast.forecast">
+            <mat-card >
+                <mat-title>{{ f.temperature }}°C</mat-title>
+                <mat-card-content>
+                    <mat-icon>{{ f.sky }}</mat-icon>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
