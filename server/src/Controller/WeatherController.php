@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Controller\Resources\WeatherForecastResource;
 use App\Controller\Resources\WeatherResource;
+use DateInterval;
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,7 +17,7 @@ class WeatherController extends AbstractController
      */
     public function today(): Response
     {
-        $weather = new WeatherResource(30, "cloudy");
+        $weather = new WeatherResource(30, "cloudy", new DateTime());
         return $this->json($weather);
     }
 
@@ -27,15 +29,21 @@ class WeatherController extends AbstractController
         $forecast = new WeatherForecastResource();
 
         {
-            $weather = new WeatherResource(30, "sunny");
+            $date = new DateTime();
+            $date->add(new DateInterval("P1D"));
+            $weather = new WeatherResource(30, "sunny", $date);
             $forecast->week[] = $weather;
         }
         {
-            $weather = new WeatherResource(29, "cloudy");
+            $date = new DateTime();
+            $date->add(new DateInterval("P2D"));
+            $weather = new WeatherResource(29, "cloudy", $date);
             $forecast->week[] = $weather;
         }
         {
-            $weather = new WeatherResource(28, "sunny");
+            $date = new DateTime();
+            $date->add(new DateInterval("P3D"));
+            $weather = new WeatherResource(28, "sunny", $date);
             $forecast->week[] = $weather;
         }
 
