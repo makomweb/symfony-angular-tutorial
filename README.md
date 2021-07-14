@@ -69,3 +69,10 @@ ng g c weather --module=app
 cd client
 ng g s weather
 ~~~
+
+## Layout the components
+
+~~~bash
+cd client
+npm install -s @angular/flex-layout
+~~~

@@ -1,0 +1,8 @@
+.grid-container {
+    max-width: 400px;
+    padding: 32px
+}
+
+.forecast-container {
+    margin-top: 16px;
+}
