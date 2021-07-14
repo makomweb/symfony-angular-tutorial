@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-export class Weather
+export interface Weather
 {
-  public temperature: number = NaN;
-  public sky: string = '';
+  temperature: number;
+  sky: string;
+  dateTime: any;
 }
 
 export class WeatherForecast

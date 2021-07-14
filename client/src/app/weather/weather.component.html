@@ -6,8 +6,7 @@
                 <div mat-card-avatar>
                     <mat-icon>{{ data.sky }}</mat-icon>
                 </div>
-                <mat-title>Sunday, 12 July</mat-title>
-                
+                <mat-title>{{ data.dateTime | myDate | date:'EEEE MMM dd' }}</mat-title>
             </mat-card-header>
             <mat-card-content>
                 <p>Temperature: {{ data.temperature }}°C</p>

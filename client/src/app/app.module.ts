@@ -1,3 +1,4 @@
+import { ToDatePipe } from './ToDatePipe';
 import { MaterialModule } from './material.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { WeatherForecastComponent } from './weather-forecast/weather-forecast.co
     AppComponent,
     WeatherComponent,
     WeatherGridComponent,
-    WeatherForecastComponent
+    WeatherForecastComponent,
+    ToDatePipe
   ],
   imports: [
     BrowserModule,

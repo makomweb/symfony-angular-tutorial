@@ -1,13 +1,13 @@
 <div class="container">
     <span class="help is-info" *ngIf="isLoading">Loading...</span>
-    <div fxLayout="25%" *ngIf="!isLoading">
+    <div fxLayout="20%" *ngIf="!isLoading">
         <div *ngFor="let f of forecast.forecast">
             <mat-card class="forecast-card">
                 <mat-card-header>
                     <div mat-card-avatar>
                         <mat-icon>{{ f.sky }}</mat-icon>
                     </div>
-                    <mat-title>Sunday, 12 July</mat-title>
+                    <mat-title>{{ f.dateTime | myDate | date:'EEEE MMM dd' }}</mat-title>
                     
                 </mat-card-header>
                 <mat-card-content>

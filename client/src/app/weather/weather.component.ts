@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  public data: Weather = new Weather();
+  public data: Weather;
   public isLoading: boolean = true;
 
   constructor(private service: WeatherService) { }
