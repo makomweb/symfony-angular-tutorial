@@ -43,7 +43,19 @@ class WeatherController extends AbstractController
         {
             $date = new DateTime();
             $date->add(new DateInterval("P3D"));
-            $weather = new WeatherResource(28, "sunny", $date);
+            $weather = new WeatherResource(28, "water_drop", $date);
+            $forecast->forecast[] = $weather;
+        }
+        {
+            $date = new DateTime();
+            $date->add(new DateInterval("P4D"));
+            $weather = new WeatherResource(27, "water_drop", $date);
+            $forecast->forecast[] = $weather;
+        }
+        {
+            $date = new DateTime();
+            $date->add(new DateInterval("P5D"));
+            $weather = new WeatherResource(27, "cloudy", $date);
             $forecast->forecast[] = $weather;
         }
 
