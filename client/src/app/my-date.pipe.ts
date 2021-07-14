@@ -4,12 +4,12 @@ import { Pipe, PipeTransform } from '@angular/core';
  * Usage:
  *   value | myDate
  * Example:
- *   {{ obj.myDateTime | myDate }}
- *   formats to: blablabla
+ *   {{ obj.myDateTime | myDate | date:'medium' }}
+ *   formats to: 'Jun 15, 2015, 9:43:11 PM'
 */
 @Pipe({name: 'myDate'})
-export class ToDatePipe implements PipeTransform {
-transform(value: any): Date {
+export class MyDatePipe implements PipeTransform {
+transform(value: MyDateTime): Date {
         return new Date(value.date + 'Z');
     }
 }
