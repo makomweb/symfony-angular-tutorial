@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class WeatherComponent implements OnInit {
 
   public data: Weather = new Weather();
-  public busy: boolean = true;
+  public isLoading: boolean = true;
 
   constructor(private service: WeatherService) { }
 
@@ -21,7 +21,7 @@ export class WeatherComponent implements OnInit {
           this.data = data;
         },
         err => console.log('today failed: ', err),
-        () => this.busy = false
+        () => this.isLoading = false
         );
   }
 }

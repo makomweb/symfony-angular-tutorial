@@ -1,5 +1,6 @@
 <div class="container">
-    <mat-card>
+    <span class="help is-info" *ngIf="isLoading">Loading...</span>
+    <mat-card *ngIf="!isLoading">
         <mat-title>{{ data.temperature }}°C</mat-title>
         <mat-card-content>
             <mat-icon>{{ data.sky }}</mat-icon>
