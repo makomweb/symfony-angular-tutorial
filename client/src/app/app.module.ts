@@ -1,3 +1,4 @@
+import { MySkyPipe } from './my-sky.pipe';
 import { MyDatePipe } from './my-date.pipe';
 import { MaterialModule } from './material.module';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { WeatherForecastComponent } from './weather-forecast/weather-forecast.co
     WeatherComponent,
     WeatherGridComponent,
     WeatherForecastComponent,
-    MyDatePipe
+    MyDatePipe,
+    MySkyPipe
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
                 </mat-card-header>
                 <mat-card-content>
                     <p>Temperature: {{ f.temperature }}°C</p>
-                    <img mat-card-image src="./../assets/sunny.jpg" alt="Photo ">            
+                    <img mat-card-image src="{{ f.sky | mySky }}" alt="Photo of sky">
                 </mat-card-content>
             </mat-card>
         </div>
