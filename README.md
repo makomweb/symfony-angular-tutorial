@@ -1,5 +1,7 @@
 # Tutorial project: Symfony + Angular + Material
 
+![image](./screenshot.png)
+
 ## Create Symfony service and start the backend
 
 ~~~bash
